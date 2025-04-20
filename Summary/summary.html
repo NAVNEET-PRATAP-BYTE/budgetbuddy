@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Budget Buddy - Summary</title>
+  <link rel="stylesheet" href="../Style/nav.css" />
+  <link rel="stylesheet" href="summary.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navigation Header -->
+  <div id="nav">
+    <div id="intro">
+      <a href="../index.html">
+        <div id="logo">
+          <img src="../logo2.png" alt="Budget Buddy Logo">
+        </div>
+      </a>
+      <div id="name">
+        <p>
+          <span class="big-b">B</span>
+          <span class="up">udget</span><br>
+          <span class="down">uddy</span>
+        </p>
+      </div>
+    </div>
+    <div id="tabs">
+      <div class="texts">
+        <a href="../Transaction/transaction.html"><i class="fas fa-exchange-alt"></i> Transactions</a>
+      </div>
+      <div class="texts">
+        <a href="summary.html" class="active"><i class="fas fa-chart-line"></i> Summary</a>
+      </div>
+      <div class="texts">
+        <a href="../History/history.html"><i class="fas fa-history"></i> History</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1 class="page-title">Budget Buddy - Summary</h1>
+    <div class="flex-container">
+      <!-- Graph Section -->
+      <div class="graph-container">
+        <canvas id="expensesChart"></canvas>
+      </div>
+
+      <!-- Expense Details Table -->
+      <div class="table-container">
+        <h2>Expense Breakdown</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>%</th>
+            </tr>
+          </thead>
+          <tbody id="expenseDetailsTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="summary.js"></script>
+</body>
+</html>

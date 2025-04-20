@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #f0fdf4, #d1fae5);
+    color: #1f2937;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Fix Navbar Overlap */
+  .container {
+    max-width: 1200px;
+    margin: 100px auto 50px; /* Added top margin to push content below navbar */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #047857;
+    margin-bottom: 30px;
+  }
+  
+  .flex-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .graph-container {
+    flex: 2;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-container {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #047857;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  table th {
+    background: #10b981;
+    color: #ffffff;
+  }
+  
+  table tbody tr:hover {
+    background: #f0fdf4;
+  }
+  
+  table tbody tr td {
+    color: #1f2937;
+  }

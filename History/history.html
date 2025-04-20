@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Budget Buddy - History</title>
+  <link rel="stylesheet" href="../Style/nav.css" />
+  <link rel="stylesheet" href="history.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <!-- Navigation Header -->
+  <div id="nav">
+    <div id="intro">
+      <a href="../index.html">
+        <div id="logo">
+          <img src="../logo2.png" alt="Budget Buddy Logo">
+        </div>
+      </a>
+      <div id="name">
+        <p>
+          <span class="big-b">B</span>
+          <span class="up">udget</span><br>
+          <span class="down">uddy</span>
+        </p>
+      </div>
+    </div>
+    <div id="tabs">
+      <div class="texts">
+        <a href="../Transaction/transaction.html" class="active"><i class="fas fa-exchange-alt"></i> Transactions</a>
+      </div>
+      <div class="texts">
+        <a href="../Summary/summary.html"><i class="fas fa-chart-line"></i> Summary</a>
+      </div>
+      <div class="texts">
+        <a href="history.html"><i class="fas fa-history"></i> History</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1 class="page-title">Budget Buddy - History</h1>
+    
+    <div class="summary-section flex justify-between items-center">
+      <div class="summary-data">
+        <p class="text-xl mb-2">Total Salary: <span class="highlight-blue font-mono">₹<span id="totalSalary">0</span></span></p>
+        <p class="text-xl mb-2">Total Expenses: <span class="highlight-red font-mono">₹<span id="totalExpenses">0</span></span></p>
+        <p class="text-xl">Leftover Amount: <span class="highlight-green font-mono">₹<span id="leftoverAmount">0</span></span></p>
+      </div>
+      <a href="../Summary/summary.html?type=total" class="summary-btn">
+        <i class="fas fa-chart-pie mr-2"></i>
+        View Total Summary
+      </a>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Salary</th>
+            <th>Expenses</th>
+            <th>Custom Expense</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="transactionsTableBody">
+          <!-- Transactions will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="history.js"></script>
+</body>
+</html>

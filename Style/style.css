@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #f0fdf4, #d1fae5);
+    color: #1f2937;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #d1fae5, #a7f3d0);
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#start-btn {
+    background: linear-gradient(90deg, #10b981, #047857);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#start-btn:hover {
+    background: linear-gradient(90deg, #047857, #10b981);
+    transform: scale(1.1);
+}
+
+#stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f0fdf4;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card {
+    text-align: center;
+    padding: 20px;
+    background: #d1fae5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.1);
+}
+
+.stat-card i {
+    font-size: 2rem;
+    color: #047857;
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    font-size: 1.5rem;
+    color: #065f46;
+}
+
+.stat-card p {
+    font-size: 1rem;
+    color: #065f46;
+}
+
+.typewriter-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.typewriter {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #047857;
+    margin-bottom: 20px;
+}
+
+.tag{
+    font-size: larger
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-btn {
+    background: linear-gradient(90deg, #10b981, #047857);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:hover {
+    background: linear-gradient(90deg, #047857, #10b981);
+    transform: scale(1.1);
+}
+
