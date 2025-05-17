@@ -4,21 +4,42 @@ const addCustomExpenseBtn = document.getElementById('addCustomExpenseBtn');
 
 let customExpenseCount = 1;
 
+
 const refreshSalaryBtn = document.getElementById('refreshSalary');
 const addToSalaryBtn = document.getElementById('addToSalary');
 const salaryInput = document.getElementById('salary');
+const bonusInput = document.getElementById('bonusAmount');
+const salaryMessage = document.getElementById('salaryMessage');
 
 // Refresh salary button
 refreshSalaryBtn.addEventListener('click', () => {
   salaryInput.value = '';
+  bonusInput.value = '';
+  showMessage('Salary and bonus reset.', 'success');
 });
 
 // Add to salary button
 addToSalaryBtn.addEventListener('click', () => {
   const currentSalary = parseFloat(salaryInput.value) || 0;
-  const bonusAmount = parseFloat(prompt('Enter bonus amount:')) || 0;
-  salaryInput.value = (currentSalary + bonusAmount).toFixed(2);
+  const bonusAmount = parseFloat(bonusInput.value) || 0;
+  if (bonusAmount > 0) {
+    salaryInput.value = (currentSalary + bonusAmount).toFixed(2);
+    bonusInput.value = '';
+    showMessage(`Added bonus: ₹${bonusAmount.toFixed(2)}`, 'success');
+  } else {
+    showMessage('Please enter a valid bonus amount', 'error');
+  }
 });
+
+// Show message function
+function showMessage(message, type = 'success') {
+  salaryMessage.textContent = message;
+  salaryMessage.className = `status-message ${type}`;
+  salaryMessage.style.opacity = '1';
+  setTimeout(() => {
+    salaryMessage.style.opacity = '0';
+  }, 3000);
+}
 
 // Store permanent custom expenses
 let permanentExpenses = JSON.parse(localStorage.getItem('permanentExpenses')) || [];
