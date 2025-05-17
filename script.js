@@ -29,3 +29,23 @@ function showNextSlide() {
 }
 
 setInterval(showNextSlide, 3000);
+
+// Load Lottie animation for the left side
+const moneyAnimationLeft = document.getElementById('money-animation-left');
+lottie.loadAnimation({
+    container: moneyAnimationLeft, // The container element
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'MoneyRain.json' // URL to the raining money animation
+});
+
+// Load Lottie animation for the right side
+const moneyAnimationRight = document.getElementById('money-animation-right');
+lottie.loadAnimation({
+    container: moneyAnimationRight, // The container element
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'MoneyRain.json' // URL to the raining money animation
+});
